@@ -178,4 +178,4 @@ Solve on remote :
 
 
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/philtered/images/3.PNG?raw=true'>
-FLAG : `DUCTF{h0w_d0_y0u_l1k3_y0ur_ph1lters?}`
+FLAG : ``DUCTF{h0w_d0_y0u_l1k3_y0ur_ph1lters?}``
