@@ -104,7 +104,9 @@ As we can see that the length is not a problem because there is some payloads we
 Testing some stuff didn't worked then i tried some mutation XSS like `<table><h1>hello</h1></table>`
 
 and the result was `<h1>hello</h1><table></table>`
-
+<br />
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/2.PNG?raw=true'>
+<br />
 Then i tried to construct a valid payload and got a working on :
 
 ```
