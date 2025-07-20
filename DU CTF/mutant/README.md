@@ -5,6 +5,9 @@
 > Just an XSS. What more is there to it?
 
 ----
+<img/src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/1.PNG?raw=true'>
+
+<br></br>
 
 **index.js**
 ```js
