@@ -116,7 +116,9 @@ Then I tried to construct a valid payload and got a working one:
 ```
 <math><annotation-xml encoding="text/html"><style><img src onerror=alert(origin)>
 ```
-
+<br />
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/4.PNG?raw=true'>
+<br />
 ***Let's get the flag***
 
 ```
