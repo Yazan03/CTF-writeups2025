@@ -47,4 +47,4 @@ CMD node app.js
 ```
 
 
-![Skeleton GIF](https://media.tenor.com/7X0tx5NHppUAAAAd/skeleton.gif)
+<img src="https://media.tenor.com/7X0tx5NHppUAAAAd/skeleton.gif" alt="Skeleton GIF" width="300">
