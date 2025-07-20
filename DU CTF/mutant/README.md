@@ -128,4 +128,13 @@ Then i tried to construct a valid payload and got a working on :
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/5.PNG?raw=true'>
 <br />
 
+***Report to the admin**
 
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/6.PNG?raw=true'>
+
+<br />
+
+FLAG :
+```
+DUCTF{if_y0u_d1dnt_us3_mutation_x5S_th3n_it_w45_un1nt3nded_435743723}
+```
