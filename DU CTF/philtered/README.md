@@ -174,7 +174,9 @@ also in this way we can control the path, getting the flag `/index.php?allow_uns
 
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/philtered/images/2.PNG?raw=true'>
 
-Solve on remote : 
+
+
+##Solve on remote :
 
 
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/philtered/images/3.PNG?raw=true'>
