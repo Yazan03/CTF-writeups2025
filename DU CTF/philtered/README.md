@@ -172,6 +172,8 @@ this will make allow_unsafe set to true -> `public $allow_unsafe = false;` to di
 
 also in this way we can control the path, getting the flag `/index.php?allow_unsafe=1&config[path]=../flag.php`
 
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/philtered/images/2.PNG?raw=true'>
+
 Solve on remote : 
 
 
