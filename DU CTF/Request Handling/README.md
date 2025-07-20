@@ -47,4 +47,4 @@ CMD node app.js
 ```
 
 
-https://tenor.com/view/skeleton-gif-13148928981517710530
+<svg src='https://tenor.com/view/skeleton-gif-13148928981517710530' />
