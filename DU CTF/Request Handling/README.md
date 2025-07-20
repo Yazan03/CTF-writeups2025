@@ -121,6 +121,7 @@ Getting the flag :
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/Request%20Handling/images/3.PNG?raw=true'>
 <br />
 FLAG : 
+
 ```
 DUCTF{35116296c07966e5f645dac55a0fe81c}
 ```
