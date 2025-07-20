@@ -99,15 +99,15 @@ Then tries to remove some elements based on nodeName.length:
 if (n.nodeName !== "#document-fragment" && (n.nodeName.length === 6 || n.nodeName.length === 8))
 ```
 
-As we can see that the length is not a problem because there is some payloads we can use such as svg, img, ... etc.
+As we can see, the length is not a problem because there are some payloads we can use, such as `<svg>`, `<img>`, etc.
 
-Testing some stuff didn't worked then i tried some mutation XSS like `<table><h1>hello</h1></table>`
+esting some stuff didn’t work, then I tried some mutation XSS like `<table><h1>hello</h1></table>`
 
 and the result was `<h1>hello</h1><table></table>`
 <br />
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/2.PNG?raw=true'>
 <br />
-Then i tried to construct a valid payload and got a working on :
+Then I tried to construct a valid payload and got a working one:
 <br />
 
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/3.PNG?raw=true'>
@@ -128,7 +128,7 @@ Then i tried to construct a valid payload and got a working on :
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/5.PNG?raw=true'>
 <br />
 
-***Report to the admin**
+***Report to the admin***
 
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/6.PNG?raw=true'>
 
