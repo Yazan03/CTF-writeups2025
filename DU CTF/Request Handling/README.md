@@ -47,4 +47,4 @@ CMD node app.js
 ```
 
 
-<img src="https://media.tenor.com/7X0tx5NHppUAAAAd/skeleton.gif" alt="Skeleton GIF" width="300">
+<img src="https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/Request%20Handling/images/skeleton.gif?raw=true" alt="Skeleton GIF" width="300">
