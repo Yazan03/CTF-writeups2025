@@ -109,8 +109,6 @@ and the result was `<h1>hello</h1><table></table>`
 <br />
 Then I tried to construct a valid payload and got a working one:
 <br />
-
-<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/DU%20CTF/mutant/images/3.PNG?raw=true'>
 <br />
 
 ```
