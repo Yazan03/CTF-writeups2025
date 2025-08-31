@@ -153,4 +153,4 @@ reporting to admin
 <br />
 
 
-<img src="https://tenor.com/view/ez-yann-gauthier-gif-18979624">
+<img src="https://tenor.com/view/ez-yann-gauthier-gif-18979624" alt="Skeleton GIF" width="300" height="300">
