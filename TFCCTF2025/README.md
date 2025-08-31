@@ -49,9 +49,13 @@ As we can see the banned list check doesn't check for capital case letters.
                 name = "Banned characters detected!"
                 print(b)
 ```
+<br />
 So we can enter "Src" and it will be fine.
-
+<br />
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/1.png">
+<br />
 Now we need to think about getting a xss using open and closing tag but it's blocked but we have an ssti here in render_page function 
+<br />
 ```py
     templ = html_template.replace("NAME", escape_html(name_to_display or ""))
     template = Template(templ, lookup=lookup)
