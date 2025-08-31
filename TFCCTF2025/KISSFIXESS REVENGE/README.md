@@ -4,7 +4,7 @@
 **Description:**  
 > Okay, NOW ain't nobody gonna solve it.
 
-For the revenge challenge there is not much changed but, but filtering got harder to bypass let's dig deeper.
+For the revenge challenge there is not much changed but filtering got harder to bypass let's dig deeper.
 
 
 This is the new app.py
