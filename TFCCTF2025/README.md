@@ -164,7 +164,7 @@ Got a callback, Let's report to the bot:
 
 <br />
 
-<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/5.png">
+<img src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/5.png">
 
 <br />
 
@@ -194,7 +194,7 @@ print("\n[+] Final Payload:\n", payload)
 
 Got it:
 <br/>
-<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/7.png">
+<img src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/7.png">
 <br />
 
-<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/8.png">
+<img src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/8.png">
