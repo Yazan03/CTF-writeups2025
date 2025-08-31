@@ -5,6 +5,7 @@
 > Kiss My Fixes.
 
 This is the important things from the app.py
+
 ```py
 lookup = TemplateLookup(directories=[os.path.dirname(__file__)], module_directory=MODULE_DIR)
 
@@ -56,13 +57,14 @@ So we can enter "Src" and it will be fine.
 <br />
 Now we need to think about getting a xss using open and closing tag but it's blocked but we have an ssti here in render_page function 
 <br />
+
 ```py
 
     templ = html_template.replace("NAME", escape_html(name_to_display or ""))
     template = Template(templ, lookup=lookup)
     return template.render(name_to_display=name_to_display, banned="&<>()")
-
 ```
+
 <br />
 So we can access anything from banned list which contain our needed string using the ssti we have the open and closing tag for xss in banned here, so to get `<` for example
 we can do `${banned[1]}` this will get us `<`
