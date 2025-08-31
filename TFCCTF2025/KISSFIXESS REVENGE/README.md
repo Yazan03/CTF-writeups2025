@@ -92,7 +92,7 @@ if __name__ == "__main__":
     run_server()
 ```
 
-As we can see now can't use the html encoding since # is blocked and it's not in the banned list.
+As we can see now can't use the html encoding since # is blocked.
 What we can do is injecting script tag then use String.fromCharCode to decode that banned characters.
 
 <br />
