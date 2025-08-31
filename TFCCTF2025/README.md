@@ -115,7 +115,7 @@ ${banned[0]}#x3c${banned[0]}#x69${banned[0]}#x6d${banned[0]}#x67${banned[0]}#x2f
 <img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/9.png">
 <br />
 
-But when we try it it's rendered as text we can use iframe to load it as html
+But when we try it it's rendered as text we can use an iframe to load it as html
 
 ```py
 st, nd, td = [f"${{banned[{i}]}}" for i in range(3)]
