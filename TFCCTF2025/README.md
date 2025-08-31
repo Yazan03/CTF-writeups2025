@@ -41,15 +41,18 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(render_page(name_to_display=name).encode("utf-8"))
 ```
+
 <br />
 As we can see the banned list check doesn't check for capital case letters.
 <br />
+
 ```py
         for b in banned:
             if b in name:
                 name = "Banned characters detected!"
                 print(b)
 ```
+
 <br />
 So we can enter "Src" and it will be fine.
 <br />
