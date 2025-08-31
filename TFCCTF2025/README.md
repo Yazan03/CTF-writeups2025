@@ -66,16 +66,19 @@ Now we need to think about getting a xss using open and closing tag but it's blo
 ```
 
 <br />
-So we can access anything from banned list which contain our needed string using the ssti we have the open and closing tag for xss in banned here, so to get `<` for example
-we can do `${banned[1]}` this will get us `<`
-Let's try get `<` : 
+
+So we can access anything from banned list which contain our needed string using the ssti we have the open and closing tag for xss in banned here, so to get `<` for example we can do `${banned[1]}` this will get us `<` Let's try get `<`: 
+
 <br />
 <img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/2.png">
 <br />
+
 As we can see it worked now can get a working payload like `<img src=x onerror=alert()>`
 
 I replaced s with S and l with L 
+
 <br />
+
 ```${banned[1]}img Src=x onerror=aLert`1`${banned[2]}```
 
 <br />
